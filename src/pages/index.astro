@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const trips = await getCollection('trips');
+const latestTrips = trips.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="TravelR - Exploring the World">
+  <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" 
+        alt="Travel Background" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+        Collect Moments,<br/>Not Things.
+      </h1>
+      <p class="text-xl md:text-2xl text-stone-200 mb-8 max-w-2xl mx-auto drop-shadow-md">
+        Join me on my next expedition. Experience the world through curated journeys and unforgettable stories.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/TravelR/#trips" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">
+          Explore Trips
+        </a>
+        <a href="/TravelR/contact" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-3 rounded-full font-semibold transition-all hover:scale-105">
+          Partner With Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="trips" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">Latest Expeditions</h2>
+      <p class="text-stone-600 max-w-2xl mx-auto">
+        A collection of my recent travels. Each journey is a unique story waiting to be told.
+      </p>
+    </div>
+    
+    <!-- Trip Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        latestTrips.map((trip) => (
+          <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 group flex flex-col h-full">
+            <a href={`/TravelR/trips/${trip.id}`} class="block overflow-hidden aspect-[4/3] relative">
+              <img 
+                src={trip.data.coverImage} 
+                alt={trip.data.title}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-3">
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">
+                  {trip.data.location}
+                </span>
+                <time datetime={trip.data.date.toISOString()} class="text-xs text-stone-500">
+                  {trip.data.date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                </time>
+              </div>
+              <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                <a href={`/TravelR/trips/${trip.id}`}>
+                  {trip.data.title}
+                </a>
+              </h3>
+              <p class="text-stone-600 text-sm line-clamp-3 mb-4 flex-grow">
+                {trip.data.description}
+              </p>
+              <a href={`/TravelR/trips/${trip.id}`} class="inline-flex items-center text-sm font-medium text-emerald-600 hover:text-emerald-700 mt-auto">
+                Read Journal <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="contact" class="bg-stone-900 text-stone-300 py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's Collaborate</h2>
+      <p class="text-lg mb-8 text-stone-400">
+        I partner with hotels, car rental agencies, and tour operators to bring authentic business.
+        Let's discuss how we can work together.
+      </p>
+      <a href="/TravelR/contact" class="inline-block bg-white text-stone-900 px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-colors">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+</Layout>

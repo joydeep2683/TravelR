@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "A travel portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <ClientRouter />
+    
+    <!-- JSON-LD for LLMs and SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joydeep Ballabh",
+        "url": "https://joydeepballabh.github.io/TravelR",
+        "jobTitle": "Travel Organizer",
+        "sameAs": [
+          "https://github.com/joydeepballabh"
+        ],
+        "description": "Travel enthusiast and expedition organizer based in India."
+      }
+    </script>
+  </head>
+  <body class="bg-stone-50 text-stone-900 antialiased min-h-screen flex flex-col">
+    <Navbar />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <footer class="py-6 text-center text-sm text-stone-500">
+      &copy; {new Date().getFullYear()} TravelR. All rights reserved.
+    </footer>
+  </body>
+</html>
