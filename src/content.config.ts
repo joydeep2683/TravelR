@@ -20,7 +20,16 @@ const trips = defineCollection({
     date: z.coerce.date(),
     location: z.string(),
     coverImage: z.string(),
-    gallery: z.array(z.string()).optional(),
+    gallery: z.array(
+      z.union([
+        z.string(),
+        z.object({
+          src: z.string(),
+          caption: z.string().optional(),
+          alt: z.string().optional()
+        })
+      ])
+    ).optional(),
   }),
 });
 

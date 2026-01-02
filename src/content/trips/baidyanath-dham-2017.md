@@ -5,9 +5,12 @@ description: "A 3-day tour with 5 guests exploring Deoghar, Jharkhand, experienc
 location: "Deoghar, Jharkhand, India"
 coverImage: "/TravelR/images/baidyanath_dham/IMG_20171225_182948_HHT.jpg?q=80&w=2021&auto=format&fit=crop"
 gallery:
-  - "/TravelR/images/baidyanath_dham/IMG_20171225_173049.jpg"
-  - "/TravelR/images/baidyanath_dham/IMG_20171225_182948_HHT.jpg"
-  - "/TravelR/images/baidyanath_dham/IMG_20171225_173150_HHT.jpg"
+  - src: "/TravelR/images/baidyanath_dham/IMG_20171225_173049.jpg"
+    caption: "At RK Mission, Deoghar. My parents, maternal aunts (mami ji and mausi ji) and cousin sister."
+  - src: "/TravelR/images/baidyanath_dham/IMG_20171225_182948_HHT.jpg"
+    caption: "Baidyanath Dham, Deoghar. Baba temple and parbati temple connected via red thread. On right Baba temple and left maa parbati temple."
+  - src: "/TravelR/images/baidyanath_dham/IMG_20171225_173150_HHT.jpg"
+    caption: "At RK Mission, Deoghar. Me and my parents"
 ---
 
 # Baidyanath Dham Yatra
