@@ -30,10 +30,9 @@ export function getDirectDriveUrl(url: string): string {
         }
 
         if (fileId) {
-            // lh3.googleusercontent.com is generally faster and supports resizing params if needed, 
-            // but drive.google.com/uc?id=XXX is the standard export format.
-            // Using UC export=view is reliable for images.
-            return `https://drive.google.com/uc?export=view&id=${fileId}`;
+            // lh3.googleusercontent.com/d/ID is the most reliable way to embed Drive images
+            // It bypasses the "virus scan" warning for large files.
+            return `https://lh3.googleusercontent.com/d/${fileId}`;
         }
     } catch (e) {
         console.error("Error parsing Google Drive URL:", e);
