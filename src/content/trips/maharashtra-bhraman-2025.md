@@ -13,6 +13,8 @@ gallery:
     caption: "Trimbakeshwar mandir entry."
   - src: "https://drive.google.com/file/d/1PD-AK1snwoAdENYSATsJQzGykfp1Wo1N/view?usp=drive_link"
     caption: "At Ajanta caves"
+audio:
+  bn: "https://res.cloudinary.com/dehl3nko6/video/upload/v1767613705/%E0%A6%85%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%BE_%E0%A6%87%E0%A6%B2%E0%A7%87%E0%A6%BE%E0%A6%B0%E0%A6%BE_%E0%A6%A4%E0%A6%BF%E0%A6%A8_%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%99%E0%A7%8D%E0%A6%97_%E0%A6%AF%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BE_gcdctg.mp3"
 ---
 
 # Between Highways and Hymns: A Sacred Journey Across Maharashtra  
@@ -276,11 +278,12 @@ between toll booths and temple bells.
   📞 [Call Now](tel:+919XXXXXXXXX)  
   Services: Full outstation travel arrangements  
   Charges: Check with Nitish ji for current rates   
+  How he helped us: Nitish ji accompanied us throughout the journey covering Trimbakeshwar, Nashik, Shirdi, Ajanta–Ellora, Shani Shingnapur, Bhimashankar, and Mumbai. He is usually a **calm and safe driver**, but whenever required due to time constraints, he was capable of driving faster while still maintaining control and safety. He is **very transparent and authentic** — he always asked us to note down every **toll, parking fee, and expense**, ensuring complete clarity in travel costs. He also helped us in **finding hotels** at multiple locations when availability was an issue, especially during late-night arrivals. Additionally, he proactively reminded us about **Ajanta being closed on Mondays and Ellora on Tuesdays**, which saved us from missing important heritage sites.
+
 
 > 📌 *For driver, hotel, or guide contacts, please comment or DM me.  
 > I’ll share the details directly — **free of cost**.  
 > I do not charge anything for sharing contacts.*  
->  
 > *Please note: I cannot publish all contact numbers publicly as I do not have permission from everyone.  
 > Only the contacts shared on this website are published with prior consent.*
 
