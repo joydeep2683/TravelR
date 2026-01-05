@@ -56,6 +56,7 @@ const latestTrips = trips.sort((a, b) => b.data.date.valueOf() - a.data.date.val
                 src={getDirectDriveUrl(trip.data.coverImage)} 
                 alt={trip.data.title}
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                referrerpolicy="no-referrer"
               />
               <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
             </a>

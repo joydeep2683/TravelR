@@ -30,9 +30,8 @@ export function getDirectDriveUrl(url: string): string {
         }
 
         if (fileId) {
-            // lh3.googleusercontent.com/d/ID is the most reliable way to embed Drive images
-            // It bypasses the "virus scan" warning for large files.
-            return `https://lh3.googleusercontent.com/d/${fileId}`;
+            // Using the thumbnail API with a large size (sz=w3000) for images.
+            return `https://drive.google.com/thumbnail?id=${fileId}&sz=w3000`;
         }
     } catch (e) {
         console.error("Error parsing Google Drive URL:", e);
