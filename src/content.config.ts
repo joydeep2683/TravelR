@@ -30,6 +30,7 @@ const trips = defineCollection({
         })
       ])
     ).optional(),
+    audio: z.record(z.string(), z.string()).optional(),
   }),
 });
 

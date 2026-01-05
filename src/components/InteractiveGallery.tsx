@@ -45,6 +45,7 @@ export default function InteractiveGallery({ images }: InteractiveGalleryProps) 
                             alt={img.alt || img.caption || 'Gallery Image'}
                             className="w-full h-auto block"
                             loading="lazy"
+                            referrerPolicy="no-referrer"
                         />
                         {img.caption && (
                             <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -82,6 +83,7 @@ export default function InteractiveGallery({ images }: InteractiveGalleryProps) 
                                 src={images[selectedImage].src}
                                 alt={images[selectedImage].alt || images[selectedImage].caption}
                                 className="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
+                                referrerPolicy="no-referrer"
                             />
 
                             {/* Caption Bar */}
